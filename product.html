@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flipkart Product Page</title>
+
+<style>
+/* ---------- RESET ---------- */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ---------- HEADER ---------- */
+header{
+  background:#2874f0;
+  color:#fff;
+  padding:12px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+}
+
+.search-box{
+  width:50%;
+}
+
+.search-box input{
+  width:100%;
+  padding:8px;
+  border:none;
+  border-radius:3px;
+}
+
+.cart{
+  font-size:16px;
+}
+
+/* ---------- MAIN CONTAINER ---------- */
+.container{
+  max-width:1200px;
+  margin:20px auto;
+  padding:15px;
+  display:flex;
+  gap:30px;
+  background:#fff;
+}
+
+/* ---------- PRODUCT IMAGE ---------- */
+.product-image{
+  flex:1;
+  text-align:center;
+}
+
+.product-image img{
+  width:100%;
+  max-width:350px;
+}
+
+/* ---------- PRODUCT DETAILS ---------- */
+.product-details{
+  flex:2;
+}
+
+.product-title{
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.rating{
+  color:#388e3c;
+  font-size:14px;
+  margin-bottom:10px;
+}
+
+.price{
+  font-size:26px;
+  color:#d32f2f;
+  margin:15px 0;
+}
+
+.offer{
+  color:#388e3c;
+  font-size:14px;
+}
+
+.buttons{
+  margin:20px 0;
+}
+
+.buttons button{
+  padding:12px 20px;
+  border:none;
+  font-size:16px;
+  cursor:pointer;
+  margin-right:10px;
+  border-radius:4px;
+}
+
+.add-cart{
+  background:#ff9f00;
+  color:#fff;
+}
+
+.buy-now{
+  background:#fb641b;
+  color:#fff;
+}
+
+/* ---------- PRODUCT INFO ---------- */
+.specs{
+  margin-top:20px;
+}
+
+.specs h3{
+  margin-bottom:10px;
+}
+
+.specs ul{
+  list-style:disc;
+  padding-left:20px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:768px){
+  header{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .search-box{
+    width:100%;
+  }
+
+  .container{
+    flex-direction:column;
+  }
+
+  .buttons button{
+    width:100%;
+    margin-bottom:10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">Flipkart</div>
+  <div class="search-box">
+    <input type="text" placeholder="Search for products">
+  </div>
+  <div class="cart">Cart</div>
+</header>
+
+<!-- PRODUCT SECTION -->
+<div class="container">
+
+  <!-- IMAGE -->
+  <div class="product-image">
+    <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/x/z/x/-original-imahgkgx3y8b4e6j.jpeg" alt="Product">
+  </div>
+
+  <!-- DETAILS -->
+  <div class="product-details">
+    <h2 class="product-title">Realme Smartphone (128 GB, Blue)</h2>
+    <p class="rating">★★★★☆ 4.3 (12,345 ratings)</p>
+
+    <p class="price">₹14,999</p>
+    <p class="offer">Extra ₹2,000 off with bank offer</p>
+
+    <div class="buttons">
+      <button class="add-cart">Add to Cart</button>
+      <button class="buy-now">Buy Now</button>
+    </div>
+
+    <div class="specs">
+      <h3>Highlights</h3>
+      <ul>
+        <li>6 GB RAM | 128 GB Storage</li>
+        <li>5000 mAh Battery</li>
+        <li>50 MP Rear Camera</li>
+        <li>Full HD+ Display</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
