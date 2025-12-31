@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flipkart Checkout Page</title>
+
+<style>
+*{margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif;}
+body{background:#f1f3f6;}
+
+/* Header */
+header{
+    background:#2874f0; color:#fff; padding:15px 20px;
+    font-size:22px; font-weight:bold;
+}
+header span{font-size:12px; color:#ffe500; margin-left:6px;}
+
+/* Layout */
+.container{
+    width:92%; margin:auto; padding:20px 0;
+    display:flex; gap:20px;
+}
+
+/* Left Section */
+.left{flex:2;}
+.card{
+    background:#fff; padding:20px; margin-bottom:15px;
+    border-radius:5px;
+}
+.card h3{margin-bottom:10px; color:#0a3d91; font-size:18px;}
+.card p a{color:#2874f0; text-decoration:none;}
+
+/* Address Cards */
+.address{
+    border:1px solid #ccc; padding:12px; border-radius:5px;
+    display:flex; gap:10px; align-items:flex-start; margin-bottom:10px;
+    cursor:pointer; transition:.2s;
+}
+.address:hover{border-color:#2874f0;}
+.address input{margin-top:5px;}
+
+.btn{
+    background:#fb641b; border:none; color:white;
+    padding:10px 20px; margin-top:10px;
+    font-size:15px; border-radius:4px; cursor:pointer;
+}
+.add-address{color:#2874f0; margin-top:10px; cursor:pointer;}
+
+input[type="text"]{
+    width:100%; padding:10px; border:1px solid #ccc;
+    border-radius:4px; margin-bottom:10px;
+}
+
+.pay-option{margin:12px 0; display:block;}
+
+.pay-btn{
+    width:100%; margin-top:10px; background:#ff9f00;
+    font-size:16px; font-weight:bold;
+}
+
+/* Right Section */
+.right{flex:1;}
+.price-box{
+    background:white; padding:20px; border-radius:5px;
+}
+.price-box h3{margin-bottom:15px;}
+.row{display:flex; justify-content:space-between; margin:8px 0;}
+.total{font-weight:bold; font-size:18px; margin-top:10px;}
+
+/* Responsive */
+@media(max-width:900px){
+    .container{flex-direction:column;}
+    .right{order:-1;}
+}
+@media(max-width:500px){
+    header{font-size:18px;}
+    .btn{width:100%;}
+}
+</style>
+</head>
+
+<body>
+
+<header>Flipkart <span>Explore Plus ✨</span></header>
+
+<div class="container">
+
+    <!-- LEFT -->
+    <div class="left">
+
+        <div class="card">
+            <h3>1. LOGIN ✔</h3>
+            <p>+91 XXXXX XXXXX <a href="#">Change</a></p>
+        </div>
+
+        <div class="card">
+            <h3>2. DELIVERY ADDRESS</h3>
+
+            <label class="address">
+                <input type="radio" name="address" checked>
+                <div>
+                    <b>Home Address</b>
+                    <p>Rajajinagar, Bengaluru - 560010</p>
+                </div>
+            </label>
+
+            <label class="address">
+                <input type="radio" name="address">
+                <div>
+                    <b>Office Address</b>
+                    <p>AECS Layout, HAL Road, Bengaluru - 560068</p>
+                </div>
+            </label>
+
+            <button class="btn">Deliver Here</button>
+            <p class="add-address">+ Add new address</p>
+        </div>
+
+        <div class="card">
+            <h3>3. PAYMENT</h3>
+
+            <form>
+                <label class="pay-option"><input type="radio" name="pay" checked> UPI Payment</label>
+                <input type="text" placeholder="Enter UPI ID">
+
+                <label class="pay-option"><input type="radio" name="pay"> Debit / Credit Card</label>
+                <input type="text" placeholder="Card Number">
+                <input type="text" placeholder="Expiry MM/YY">
+                <input type="text" placeholder="CVV">
+
+                <label class="pay-option"><input type="radio" name="pay"> Cash On Delivery</label>
+
+                <button class="btn pay-btn">Pay ₹14,999</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- RIGHT PRICE DETAILS -->
+    <div class="right">
+        <div class="price-box">
+            <h3>PRICE DETAILS</h3>
+            <div class="row"><span>Realme Smartphone</span><span>₹14,999</span></div>
+            <div class="row"><span>Delivery Charges</span><span style="color:green;">Free</span></div>
+            <hr>
+            <div class="row total"><span>Total Payable</span><span>₹14,999</span></div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+           
